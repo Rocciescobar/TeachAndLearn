@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url('../assets/images/edu7.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+h2 {
+color: green;
+}
+
+p {
+  text-align: center;
+}
+.first {
+  text-align: center;
+}
+
+.social {
+  margin-left: 3%;
+}
