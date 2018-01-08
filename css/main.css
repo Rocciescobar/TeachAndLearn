@@ -1,26 +1,43 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+
+/* Estilos para calificación de artículos */
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
 }
 
-body {
-  background-image: url('../assets/images/edu7.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-h2 {
-color: green;
-}
-
-p {
-  text-align: center;
-}
-.first {
+#form p {
   text-align: center;
 }
 
-.social {
-  margin-left: 3%;
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+/* Otros estilos */
+
+.mar-bot-no {
+  margin-bottom: 0;
 }
