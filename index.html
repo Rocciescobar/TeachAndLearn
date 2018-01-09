@@ -19,13 +19,17 @@
     <div class="slider fullscreen">
       <ul class="slides">
         <li>
-          <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+          <img src="assets/images/fondo1-login.jpg"> 
           <div class="caption center-align">
-            <h3>This is our big Tagline</h3>
-            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <h3 class="yellow-text">Teach&Learn</h3>
+            <h5 class="light grey-text text-lighten-3">Regístrate para aprender y enseñar.</h5>
+            <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+
+            <!-- Para trabajar con firebase -->
+            <div id="root"></div>
 
             <!-- Modal Trigger Iinicio Modal-->
-            <a class="waves-effect waves-light btn modal-trigger" href="views/home.html">Login</a>
+            <a class="waves-effect waves-light btn modal-trigger" href="#">Login</a>
             <!-- Modal Structure -->
             <div id="modal1" class="modal modal-fixed-footer">
               <div class="modal-content">
@@ -33,20 +37,20 @@
                 <p>A bunch of text</p>
               </div>
               <div class="modal-footer">
-                <a href="views/home.html" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
               </div>
             </div>
             <!--final modal-->
           </div>
         </li>
         <li>
-          <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+          <img src="assets/images/fondo2-login.jpg"> <!-- random image -->
           <div class="caption left-align">
-            <h3>Left Aligned Caption</h3>
+            <h3 class="yellow-text">Teach&Learn</h3>
             <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
           
             <!-- Modal Trigger Iinicio Modal-->
-            <a class="waves-effect waves-light btn modal-trigger" href="views/home.html">Login</a>
+            <a class="waves-effect waves-light btn modal-trigger" href="#">Login</a>
             <!-- Modal Structure -->
             <div id="modal1" class="modal modal-fixed-footer">
               <div class="modal-content">
@@ -54,7 +58,7 @@
                 <p>A bunch of text</p>
               </div>
               <div class="modal-footer">
-                <a href="views/home.html" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
               </div>
             </div>
             <!--final modal-->
@@ -62,11 +66,13 @@
         </li>
       </ul>
     </div>
-
+    
     <!--Import jQuery before materialize.js-->
     <script src="vendors/js/jquery-3.2.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <!-- js/app.js-->
     <script src="js/login.js" type="text/javascript"></script>
   </body>

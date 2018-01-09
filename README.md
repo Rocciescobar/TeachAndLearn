@@ -20,3 +20,5 @@ Desplegar el producto en Github Pages
 Opcional, si se desarrolla un login o se desea almacenar la información en una base de datos, usar Firebase.
 
 # DEL DESARROLLO
+
+* Para usar la red social deberá tener instalado web server for chrome.
