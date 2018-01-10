@@ -3,47 +3,56 @@ $(document).ready(function() {
   $('.button-collapse').sideNav();
   $('.modal').modal();
   $('.fixed-action-btn').closeFAB();
-  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-  // $('.collapsible').collapsible();
-});
 
-window.addEventListener('load', function() {
-  var catchPost = document.getElementById('catch-post');
-  var button = document.getElementById('save-post');
-  var containerPosts = document.getElementById('container-posts');
-  var counter = document.querySelector('.counter');
+  // Initialize Firebase
+  var config = {
+    apiKey: 'AIzaSyAdfKIfUVywLMX1SkbPAu-T4naz2GMTSro',
+    authDomain: 'teachandlearn-d4eb8.firebaseapp.com',
+    databaseURL: 'https://teachandlearn-d4eb8.firebaseio.com',
+    projectId: 'teachandlearn-d4eb8',
+    storageBucket: '',
+    messagingSenderId: '13064064731'
+  };
+  firebase.initializeApp(config);
 
-  // Creando posts
-  button.addEventListener('click', function(event) {
-    for (var i = 0; i < catchPost.value.length; i++) {
-      if (catchPost.value[i] === ' ') {
-        event.preventDefault();
-      } else {
-        var post = document.createElement('p');
-        post.textContent = catchPost.value;
+  // Obteniendo información del usuario
+  var nameHome = $('#nameHome');
+  var nameProfile = $('#nameProfile');
+  var mailHome = $('#mailHome');
+  var imgUser = $('#imgUser');
+  var imgUserProfile = $('#imgUserProfile');
 
-        // Agregando formato  de hora
-        post.innerHTML = catchPost.value + '<br>' + moment().format('hh:mm a');
-
-        post.classList.add('posts');
-
-        containerPosts.insertBefore(post, containerPosts.firstElementChild);
-
-        catchPost.value = '';
-        catchPost.focus();
-        counter.textContent = 140;
-        counter.className = 'text-color';
-        catchPost.style.height = '66px';
-      }
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      // ...
+      nameHome.text(displayName);
+      nameProfile.text(displayName);
+      mailHome.text(email);
+      imgUser.attr('src', photoURL);
+      imgUserProfile.attr('src', photoURL);
+    } else {
+      // User is signed out.
+      // ...
     }
   });
 
-  // Textarea ajustable de acuerdo al tamaño del texto
-  catchPost.addEventListener('keydown', function() {
-    var keyboardEnter = this;
-    setTimeout(function() {
-      keyboardEnter.style.height = 'auto';
-      keyboardEnter.style.height = keyboardEnter.scrollHeight + 'px';
-    }, 0);
+  // Cerrar sesión
+  var btnLogout = $('#btnLogout');
+
+  btnLogout.click(function() {
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+      window.location.href = '../index.html';
+    }).catch(function(error) {
+      // An error happened.
+    });
   });
 });
