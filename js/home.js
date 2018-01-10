@@ -9,7 +9,6 @@ $(document).ready(function() {
     $('.charge').fadeOut('fast');
   }, 2000);
 
-
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyAdfKIfUVywLMX1SkbPAu-T4naz2GMTSro',
@@ -22,13 +21,11 @@ $(document).ready(function() {
   firebase.initializeApp(config);
 
   // Obteniendo información del usuario
-  var nameHome = $('#nameHome');
-  var nameProfile = $('#nameProfile');
-  var nameDesk = $('#nameDesk');
+  var nameHome = $('.nameHome');
   var mailHome = $('#mailHome');
-  var imgUser = $('#imgUser');
-  var imgUserProfile = $('#imgUserProfile');
-  var imgUserDesk = $('#imgUserDesk');
+  var imgUser = $('.imgUser');
+  var buttonPost = $('#buttonPost');
+  var containerPosts = $('#containerPosts');
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -41,12 +38,16 @@ $(document).ready(function() {
       var uid = user.uid;
       var providerData = user.providerData;
       // ...
-      nameHome.text(displayName);
-      nameProfile.text(displayName);
-      nameDesk.text(displayName);
+      nameHome.text(displayName);     
       mailHome.text(email);
       imgUser.attr('src', photoURL);
-      imgUserProfile.attr('src', photoURL);
+
+      // Creando posts 
+      buttonPost.click(function() {
+        var catchPost = $('#textarea1').val();
+        containerPosts.prepend('<div class="col s12"><div class="card blue-grey darken-1"><div class="card-content white-text"><div class="row valign-wrapper"><div class="col s2"><img src="' + photoURL + '" alt="" class="circle responsive-img"></div><div class="col s10"><span class=" light-green-text"><strong id="namePosts">' + displayName + '</strong></span><p class="gray-text">' + moment().format('MMM Do YY') + ' a las ' + moment().format('hh:mm a') + '</p></div></div><p>' + catchPost + '</p></div><div class="card-action"><a href="#"><i class="material-icons  light-green-text">favorite_border</i></a><a href="#"><i class="material-icons  light-green-text">comment</i></a><a href="#"><i class="material-icons light-green-text">share</i></a></div></div></div>');
+        $('#textarea1').val('');
+      });      
     } else {
       // User is signed out.
       // ...
