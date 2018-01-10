@@ -4,7 +4,7 @@ $(document).ready(function() {
   $('.modal').modal();
   $('.fixed-action-btn').closeFAB();
 
-  // Efecto loader en notificaciones
+  //  Efecto loader en notificaciones
   setTimeout(function() {
     $('.charge').fadeOut('fast');
   }, 2000);
