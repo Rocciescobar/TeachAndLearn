@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!--Import Font-awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <!--Import Google Icon Font-->
@@ -13,6 +14,8 @@
     <!-- main.css-->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Teach&Learn</title>
+    <meta name="google-signin-client_id" content="974335789354-anjlmfkl4l804u0j3rn6c6vgsegj688b.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
     <!-- Sliders de intro a la app -->
@@ -45,7 +48,7 @@
         <p>A bunch of text</p>
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Crear Cuenta</a>
+        <a href="views/home.html" class="modal-action modal-close waves-effect waves-green btn-flat">Crear Cuenta</a>
       </div>
     </div>
     <!-- Modal Trigger -->
@@ -58,21 +61,31 @@
         <p>A bunch of text</p>
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+        <a href="views/home.html" class="modal-action modal-close waves-effect waves-green btn-flat">Login</a>
       </div>
     </div>
     </div>
 
   <h5 class="first">o</h5>
-  <div class="first">
+  <!--<div class="first">
     <a class="waves-effect waves-light btn-floating social facebook"><i class="fa fa-facebook"></i> Sign in with facebook</a>
-    <a class="waves-effect waves-light btn-floating social google"><i class="fa fa-google"></i> Sign in with google</a>
+  </div>-->
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <div class="data">
+    <p>Profile Details</p>
+    <img id="pic" class="circle" width="100" height="100">
+    <p>Email Address</p>
+    <p id="email" class="alert alert-danger"></p>
+    <button onclick="signOut()" class="btn btn-danger">Sign Out</button>
   </div>
+
+
 
     <!--Import jQuery before materialize.js-->
     <script src="vendors/js/jquery-3.2.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
     <!-- js/app.js-->
     <script src="js/login.js" type="text/javascript"></script>
   </body>

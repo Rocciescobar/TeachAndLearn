@@ -1,4 +1,12 @@
 /*Estilos de Login*/
+.g-signin2{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.data {
+  display: none;
+}
 .first {
   text-align: center;
 }
