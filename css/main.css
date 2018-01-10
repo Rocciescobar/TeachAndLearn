@@ -1,15 +1,8 @@
-/*Estilos de Login*/
-.g-signin2{
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-.data {
-  display: none;
-}
+/* Estilos de Login */
 .first {
   text-align: center;
 }
+
 /* Estilos para calificación de artículos */
 #form {
   width: 250px;
