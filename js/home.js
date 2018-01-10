@@ -23,9 +23,11 @@ $(document).ready(function() {
   // Obteniendo información del usuario
   var nameHome = $('#nameHome');
   var nameProfile = $('#nameProfile');
+  var nameDesk = $('#nameDesk');
   var mailHome = $('#mailHome');
   var imgUser = $('#imgUser');
   var imgUserProfile = $('#imgUserProfile');
+  var imgUserDesk = $('#imgUserDesk');
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -39,7 +41,8 @@ $(document).ready(function() {
       var providerData = user.providerData;
       // ...
       nameHome.text(displayName);
-      nameProfile.text(displayName);
+      nameProfile.text(displayName);  
+      nameDesk.text(displayName);  
       mailHome.text(email);
       imgUser.attr('src', photoURL);
       imgUserProfile.attr('src', photoURL);
@@ -50,7 +53,7 @@ $(document).ready(function() {
   });
 
   // Cerrar sesión
-  var btnLogout = $('#btnLogout');
+  var btnLogout = $('.btnLogout'); // #btnLogout
 
   btnLogout.click(function() {
     firebase.auth().signOut().then(function() {

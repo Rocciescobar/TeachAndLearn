@@ -44,4 +44,89 @@ input[type="radio"]:checked ~ label {
 
 .mar-bot-no {
   margin-bottom: 0;
+<<<<<<< HEAD
 }  
+=======
+}
+
+.img-small {
+  height: 50px;
+  width: 50px;  
+}
+
+/* Estilo de publicaciones
+
+.textHeader {
+  background-color: #6ad2f3;
+  color: #fff;
+  text-align: center;
+}
+
+/*Section*/
+
+.box-form, .box-info {
+  background-color: #fff;
+  min-width: 70%;
+}
+
+.box-form {
+  float: right;
+}
+
+.box-form textarea {
+  border: none;
+  border-bottom: 1px solid #d6dadc;
+  font-size: 1.2em;
+  margin: 10px;
+  overflow: hidden;
+  resize: none;
+  width: 50%;
+}
+
+.box-info {
+  float: left;
+  text-align: left;
+}
+
+.box-info h2 {
+  margin: 20px 25px;
+}
+
+.box-info p:nth-child(2) {
+  margin: 0 20px 20px;
+}
+
+.box-info p:last-child {
+  color: #004080;
+  font-weight: bold;
+  margin: 20px 25px;
+}
+
+.button-counter p {
+  float: right;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 10px
+}
+
+.text-color {
+  color:  #000;
+}
+
+.text-color-120 {
+  color: #feae22;
+}
+
+.text-color-130 {
+  color:  #e0245e;
+}
+
+.posts {
+  background-color: #fff;
+  font-size: 1.1em;
+  margin: 15px auto;
+  max-width: 900px;
+  padding: 15px;
+}
+>>>>>>> f6fe81da8127600c6261b53f73b2b3d04c11835d
