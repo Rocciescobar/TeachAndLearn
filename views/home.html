@@ -114,7 +114,7 @@
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" class="materialize-textarea" data-length="120">
+                  <textarea id="textarea1" id="catch-post" class="materialize-textarea" data-length="140">
                   </textarea>
                   <label for="textarea1">¿Que deseas compartir o saber?</label>
                 </div>
@@ -122,8 +122,8 @@
             </form>
           </div>
         </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="Materialize.toast('Gracias por compartir!', 4000, 'rounded')">Publicar</a>
+        <div class="modal-footer button-counter">
+          <a href="#!" class="save-post modal-action modal-close waves-effect waves-green btn-flat" onclick="Materialize.toast('Gracias por compartir!', 4000, 'rounded')">Publicar</a>
         </div>
       </div>
       <div id="modal2" class="modal">
@@ -164,16 +164,12 @@
       </div>
       <!--Fin de Modales para publicación-->
     </div>
-    <div class="divider"></div>
-    <div class="section">
-      <h6>Section 2</h6>
-      <p>Stuff</p>
-    </div>
-    <div class="divider"></div>
-    <div class="section">
-      <h6>Section 3</h6>
-      <p>Stuff</p>
-    </div>
+    <!--contenedor de post-->
+
+    <section>
+      <div id="container-posts">
+      </div>
+    </section>
 
 
     <!--Import jQuery before materialize.js-->
