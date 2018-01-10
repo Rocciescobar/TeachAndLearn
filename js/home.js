@@ -13,27 +13,6 @@ window.addEventListener('load', function() {
   var containerPosts = document.getElementById('container-posts');
   var counter = document.querySelector('.counter');
 
-  // Creando contador
-  catchPost.addEventListener('keyup', function() {
-    var postLength = catchPost.value.length;
-    var characters = 140 - postLength;
-    counter.textContent = characters;
-
-    if (postLength < 120) {
-      counter.className = 'text-color';
-      button.disabled = false;
-    } else if (postLength > 120 && postLength < 130) {
-      counter.className = 'text-color-120';
-      button.disabled = false;
-    } else if (postLength > 130 && postLength < 140) {
-      counter.className = 'text-color-130';
-      button.disabled = false;
-    } else if (postLength > 140) {
-      counter.className = 'text-color';
-      button.disabled = true;
-    }
-  });
-
   // Creando posts
   button.addEventListener('click', function(event) {
     for (var i = 0; i < catchPost.value.length; i++) {
