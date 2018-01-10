@@ -20,7 +20,7 @@
         <div class="section hide-on-med-and-up">
           <div class="row valign-wrapper mar-bot-no">
             <div class="col s3">
-              <a href="#" id="img-user" data-activates="slide-out" class="button-collapse col s12">
+              <a href="#" data-activates="slide-out" class="button-collapse col s12">
                 <img src="../assets/images/usuario.png" alt="" class="circle responsive-img">
               </a>
             </div>
@@ -110,20 +110,17 @@
       <!--Inicio de Modales para publicación-->
       <div id="modal1" class="modal">
         <div class="modal-content">
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" id="catch-post" class="materialize-textarea" data-length="140">
-                  </textarea>
-                  <label for="textarea1">¿Que deseas compartir o saber?</label>
-                </div>
+          <div class="container">
+            <div class="box-form">
+              <form>
+                <textarea type="text" id="catch-post" rows="3" placeholder="¿Qué estás pensando?"></textarea>
+              </form>
+              <div class="button-counter">
+                <button type="button" id="save-post" class="btn">Publicar</button>
+                <p class="counter">140</p>
               </div>
-            </form>
+            </div>
           </div>
-        </div>
-        <div class="modal-footer button-counter">
-          <a href="#!" class="save-post modal-action modal-close waves-effect waves-green btn-flat" onclick="Materialize.toast('Gracias por compartir!', 4000, 'rounded')">Publicar</a>
         </div>
       </div>
       <div id="modal2" class="modal">
@@ -164,12 +161,13 @@
       </div>
       <!--Fin de Modales para publicación-->
     </div>
-    <!--contenedor de post-->
-
-    <section>
+    <div class="divider">
+    </div>
+    <div class="section">
       <div id="container-posts">
       </div>
-    </section>
+    </div>
+
 
 
     <!--Import jQuery before materialize.js-->

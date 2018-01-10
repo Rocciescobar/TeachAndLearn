@@ -6,31 +6,7 @@ $(document).ready(function() {
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
   // $('.collapsible').collapsible();
 });
-/*<div class="textHeader">
-        <h1>Twitter</h1>
-      </div>
-    </header>
-    <section>
-      <div id="container">
-        <div class="box-info">
-          <h2>Reto de Código</h2>
-          <p>Hola, <br> soy front-end developer jr.</p>
-          <hr>
-          <p>CÓDIGO</p>
-        </div>
-        <div class="box-form">
-          <form>
-            <textarea type="text" id="catch-post" rows="3" placeholder="¿Qué estás pensando?"></textarea>
-          </form>
-          <div class="button-counter">
-            <button type="submit" id="save-post" class="btn">TWEET</button>
-            <p class="counter">140</p>
-          </div>
-        </div>
-      </div>
-      <div id="container-posts">
-      </div>
-    </section>*/
+
 window.addEventListener('load', function() {
   var catchPost = document.getElementById('catch-post');
   var button = document.getElementById('save-post');
