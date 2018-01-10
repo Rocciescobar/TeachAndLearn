@@ -46,6 +46,11 @@ input[type="radio"]:checked ~ label {
   margin-bottom: 0;
 }
 
+.img-small {
+  height: 50px;
+  width: 50px;  
+}
+
 /* Estilo de publicaciones
 
 .textHeader {
