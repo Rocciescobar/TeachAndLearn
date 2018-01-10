@@ -4,6 +4,7 @@ $(document).ready(function() {
   $('.modal').modal();
   $('.fixed-action-btn').closeFAB();
 
+  //  Efecto loader en notificaciones
   setTimeout(function() {
     $('.charge').fadeOut('fast');
   }, 2000);
@@ -41,8 +42,8 @@ $(document).ready(function() {
       var providerData = user.providerData;
       // ...
       nameHome.text(displayName);
-      nameProfile.text(displayName);  
-      nameDesk.text(displayName);  
+      nameProfile.text(displayName);
+      nameDesk.text(displayName);
       mailHome.text(email);
       imgUser.attr('src', photoURL);
       imgUserProfile.attr('src', photoURL);
