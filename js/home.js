@@ -4,6 +4,11 @@ $(document).ready(function() {
   $('.modal').modal();
   $('.fixed-action-btn').closeFAB();
 
+  setTimeout(function() {
+    $('.charge').fadeOut('fast');
+  }, 2000);
+
+
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyAdfKIfUVywLMX1SkbPAu-T4naz2GMTSro',
