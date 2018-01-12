@@ -4,10 +4,24 @@ $(document).ready(function() {
   $('.modal').modal();
   $('.fixed-action-btn').closeFAB();
 
-  //  Efecto loader en notificaciones
+  //  Efecto loader en notificaciones y mensajes
   setTimeout(function() {
     $('.charge').fadeOut('fast');
   }, 2000);
+
+  // Autocompletar en sección mensajes
+  $('input.autocomplete').autocomplete({
+    data: {
+      'Rocci Escobar': null,
+      'Karina': null,
+      'Google': 'https://placehold.it/250x250'
+    },
+    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+    onAutocomplete: function(val) {
+      // Callback function when value is autcompleted.
+    },
+    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+  });
 
   // Initialize Firebase
   var config = {
@@ -60,7 +74,7 @@ $(document).ready(function() {
   btnLogout.click(function() {
     firebase.auth().signOut().then(function() {
       // Sign-out successful.
-      window.location.href = '../index.html';
+      window.location.href = '../../index.html';
     }).catch(function(error) {
       // An error happened.
     });

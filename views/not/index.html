@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="icon" href="../../assets/icons/T_L_1_.ico">
+    <!-- main.css-->
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <title>Teach&Learn-Notifications</title>
+  </head>
+  <body>
+    <!-- NavBar-->
+    <nav class="nav-extended light-green">
+      <div class="nav-wrapper">
+        <!-- Versión mobile-->
+        <div class="section hide-on-med-and-up">
+          <div class="row valign-wrapper mar-bot-no">
+            <div class="col s3">
+              <a href="#" id="img-user" data-activates="slide-out" class="button-collapse col s12">
+                <img src="../../assets/images/usuario.png" alt="" id="imgUser" class="circle responsive-img">
+              </a>
+            </div>
+            <div class="col s9">
+              <h5 class="nameHome">Nombre de usuario</h5>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="nav-content hide-on-med-and-up">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="../home/index.html"><i class="material-icons">home</i></a></li>
+            <li class="tab"><a class="active" href="index.html"><i class="material-icons">notifications</i></a></li>
+            <li class="tab"><a href="#!"><i class="material-icons">search</i></a></li>
+            <li class="tab"><a href="../message/index.html"><i class="material-icons">email</i></a></li>
+          </ul>
+        </div>
+        <!-- Version desktop -->
+        <a href="#!" class="brand-logo center hide-on-small-and-down">Teach&Learn</a>
+        <ul class="left hide-on-small-and-down">
+          <li><a href="../home/index.html">Inicio</a></li>
+          <li class="active"><a href="index.html">Notificaciones</a></li>
+          <li><a href="../message/index.html">Mensajes</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Despliega información de perfil (Mobile) -->
+    <ul id="slide-out" class="side-nav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="../../assets/images/fondo.jpg">
+          </div>
+          <a href="#!user"><img class="circle imgUser" src="../../assets/images/usuario.png"></a>
+          <a href="#!name"><span class="white-text name nameHome">Nombre de usuario</span></a>
+          <a href="#!email"><span id="mailHome" class="white-text email">usuario@email.com</span></a>
+        </div>
+      </li>
+      <li><a href="#!">Mira tu perfil</a></li>
+      <li><a href="#!">Preferencias de noticias</a></li>
+      <li><a href="#!">Configuración</a></li>
+      <li><a id="" class="waves-effect btnLogout" href="#!">Cerrar sesión</a></li>
+    </ul>
+    <!-- main -->
+    <main>
+      <!-- Efecto preloader -->
+      <div class="preloader-wrapper small active charge">
+        <div class="spinner-layer spinner-blue">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>  
+        <div class="spinner-layer spinner-red">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>  
+        <div class="spinner-layer spinner-yellow">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>  
+        <div class="spinner-layer spinner-green">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Lista de notificacion -->
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="../../assets/images/usuario.png" alt="" class="circle">
+          <span class="title">Te siguen!</span>
+          <p>Marco Antonio Velazco <br>
+            "Hola! Agrégame para poder ayudarte!"
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">group_add</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <i class="material-icons circle">video_library</i>
+          <span class="title">Tu video es un éxito!</span>
+          <p>Le gusta a 5 personas! <br>
+            Sigue así!
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../../assets/images/usuario.png" alt="" class="circle">
+          <span class="title">Te han respondido</span>
+          <p>Antonia Hilario te ha respondido! <br>
+            Revisa la información!
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">message</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <i class="material-icons circle green">insert_chart</i>
+          <span class="title">Tu opinión es impotante!</span>
+          <p>Califícanos!<br>
+            Queremos ser tu soporte!
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../../assets/images/usuario.png" alt="" class="circle">
+          <span class="title">No olvides calificar!</span>
+          <p>Materialize por Rocci Escobar <br>
+            Califica que tanto te gustó su tutoría!
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">thumbs_up_down</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <i class="material-icons circle red">play_arrow</i>
+          <span class="title">Tu video subió con éxito</span>
+          <p>Sigue compartiendo! <br>
+            Con tu ayuda más personas acceden a mejorar su educación
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">check_box</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../../assets/images/usuario.png" alt="" class="circle">
+          <span class="title">Haz recibido un mensaje!</span>
+          <p>Rocci Escobar te ha escrito: <br>
+            "No olvides mejorar tu indentación..."
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">message</i></a>
+        </li>
+      </ul>
+    </main>
+    <!--Import jQuery before materialize.js-->
+    <script src="../../vendors/js/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- Plataforma Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <!-- js/app.js-->
+    <script src="../../js/app.js" type="text/javascript"></script>
+  </body>
+</html>

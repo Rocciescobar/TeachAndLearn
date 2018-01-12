@@ -53,8 +53,6 @@ $(document).ready(function() {
   $('#login-gmail').click(function() {
     firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
       saveData(result.user);
-      console.log(result.user);
-      // window.location.href = '../views/home.html';
     });
   });
 
@@ -63,8 +61,6 @@ $(document).ready(function() {
   $('#login-facebook').click(function() {
     firebase.auth().signInWithPopup(providerFaceb).then(function(result) {
       saveData(result.user);
-      console.log(result.user);
-      // window.location.href = '../views/home.html';
     });
   });
   
@@ -77,7 +73,7 @@ $(document).ready(function() {
       foto: user.photoURL
     };
     firebase.database().ref('datapp').push(users).then(user => {
-      window.location.href = '../views/home.html';
+      window.location.href = '../views/home';
     });
   };
 });

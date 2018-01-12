@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="icon" href="../../assets/icons/T_L_1_.ico">
+    <!-- main.css-->
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <title>Teach&Learn-Message</title>
+  </head>
+  <body>
+    <!-- NavBar-->
+    <nav class="nav-extended light-green">
+      <div class="nav-wrapper">
+        <!-- Versión mobile-->
+        <div class="section hide-on-med-and-up">
+          <div class="row valign-wrapper mar-bot-no">
+            <div class="col s3">
+              <a href="#" id="img-user" data-activates="slide-out" class="button-collapse col s12">
+                <img src="../../assets/images/usuario.png" alt="" id="imgUser" class="circle responsive-img">
+              </a>
+            </div>
+            <div class="col s9">
+              <h5 class="nameHome">Nombre de usuario</h5>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="nav-content hide-on-med-and-up">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="../home/index.html"><i class="material-icons">home</i></a></li>
+            <li class="tab"><a href="../not/index.html"><i class="material-icons">notifications</i></a></li>
+            <li class="tab"><a href="#!"><i class="material-icons">search</i></a></li>
+            <li class="tab"><a class="active" href="index.html"><i class="material-icons">email</i></a></li>
+          </ul>
+        </div>
+        <!-- Version desktop -->
+        <a href="#!" class="brand-logo center hide-on-small-and-down">Teach&Learn</a>
+        <ul class="left hide-on-small-and-down">
+          <li><a href="../home/index.html">Inicio</a></li>
+          <li><a href="../not/index.html">Notificaciones</a></li>
+          <li class="active"><a href="index.html">Mensajes</a></li>
+        </ul>
+      </div>
+    </nav>
+      <!-- Despliega información de perfil (Mobile) -->
+      <ul id="slide-out" class="side-nav">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img src="../../assets/images/fondo.jpg">
+            </div>
+            <a href="#!user"><img class="circle imgUser" src="../../assets/images/usuario.png"></a>
+            <a href="#!name"><span class="white-text name nameHome">Nombre de usuario</span></a>
+            <a href="#!email"><span id="mailHome" class="white-text email">usuario@email.com</span></a>
+          </div>
+        </li>
+        <li><a href="#!">Mira tu perfil</a></li>
+        <li><a href="#!">Preferencias de noticias</a></li>
+        <li><a href="#!">Configuración</a></li>
+        <li><a class="waves-effect btnLogout" href="#!">Cerrar sesión</a></li>
+      </ul>
+    <!-- main -->
+    <main>
+      <!-- Efecto preloader -->
+      <div class="preloader-wrapper small active charge">
+        <div class="spinner-layer spinner-blue">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="spinner-layer spinner-red">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="spinner-layer spinner-yellow">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="spinner-layer spinner-green">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Lista de mensajes -->
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="../../assets/images/usuario.png" alt="" class="circle">
+          <span class="title"><strong>Karina Buhezo</strong></span>
+          <p>Te envió un sticker</p>
+          <span class="secondary-content">23:01</span>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../../assets/images/usuario.png" alt="" class="circle">
+          <span class="title"><strong>Rocci Escobar</strong></span>
+          <p>Te envió un link</p>
+          <span class="secondary-content">15:30</span>
+        </li>
+        <li class="collection-item avatar">
+          <img src="../../assets/images/usuario.png" alt="" class="circle">
+          <span class="title"><strong>Leonardo Di Caprio</strong></span>
+          <p>Te envió una foto</p>
+          <span class="secondary-content">01:00</span>
+        </li>
+      </ul>
+      <!-- Botón de mensajes -->
+      <div class="fixed-action-btn horizontal click-to-toggle">
+        <a class="btn-floating btn-large pulse red modal-trigger" href="#modal1">
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </div>
+      <!-- Modal Structure -->
+      <!-- Elegir persona para enviar mensaje -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h5 class="light-green-text center-align"><i class="material-icons">edit</i> Mensaje nuevo</h5>
+          <div class="divider"></div>
+          <div class="row">
+            <div class="col s12">
+              <br>
+              <h6><strong>Enviar mensaje a:</strong></h6>
+              <br>
+              <div class="row mar-bot-no">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">textsms</i>
+                  <input type="text" id="autocomplete-input" class="autocomplete">
+                  <label for="autocomplete-input">Ingresa un nombre</label>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="waves-effect waves-light btn light-green darken-4">Siguiente</a>
+        </div>
+      </div>
+      <!-- Enviar mensaje -->
+    </main>
+    <!--Import jQuery before materialize.js-->
+    <script src="../../vendors/js/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- Plataforma Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <!-- js/app.js-->
+    <script src="../../js/app.js" type="text/javascript"></script>
+  </body>
+</html>
+../
