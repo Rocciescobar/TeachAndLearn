@@ -3,6 +3,12 @@
   text-align: center;
 }
 
+/* Estilos de tipografía */
+
+.text-shadow {
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
 /* Otros estilos */
 
 .mar-bot-no {
