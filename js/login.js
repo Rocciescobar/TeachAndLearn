@@ -73,7 +73,7 @@ $(document).ready(function() {
       foto: user.photoURL
     };
     firebase.database().ref('datapp').push(users).then(user => {
-      window.location.href = '../views/home';
+      window.location.href = 'views/home';
     });
   };
 });
