@@ -17,5 +17,16 @@
 
 .img-small {
   height: 50px;
-  width: 50px;  
+  width: 50px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 15%;
+  margin-right: 10px;
+}
+
+.second {
+  margin-right: 2%;
 }
