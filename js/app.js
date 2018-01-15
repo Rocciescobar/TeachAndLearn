@@ -1,8 +1,16 @@
 $(document).ready(function() {
   // Initialize collapse button
   $('.button-collapse').sideNav();
-  $('.modal').modal();
+  $('.modal').modal({
+    ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+      console.log(modal, trigger);
+    },
+  }
+  );
   $('.fixed-action-btn').closeFAB();
+  $('#modal2').modal({
+
+  });
 
   //  Efecto loader en notificaciones y mensajes
   setTimeout(function() {
@@ -52,11 +60,11 @@ $(document).ready(function() {
       var uid = user.uid;
       var providerData = user.providerData;
       // ...
-      nameHome.text(displayName);     
+      nameHome.text(displayName);
       mailHome.text(email);
       imgUser.attr('src', photoURL);
 
-      // Creando posts 
+      // Creando posts
       buttonPost.click(function() {
         var catchPost = $('#textarea1').val();
         var catchImg = $('fileButton').val();
