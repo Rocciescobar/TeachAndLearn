@@ -59,9 +59,24 @@ $(document).ready(function() {
       // Creando posts 
       buttonPost.click(function() {
         var catchPost = $('#textarea1').val();
-        containerPosts.prepend('<div class="col s12"><div class="card blue-grey darken-1"><div class="card-content white-text"><div class="row valign-wrapper"><div class="col s2"><img src="' + photoURL + '" alt="" class="circle responsive-img"></div><div class="col s10"><span class=" light-green-text"><strong id="namePosts">' + displayName + '</strong></span><p class="gray-text">' + moment().format('MMM Do YY') + ' a las ' + moment().format('hh:mm a') + '</p></div></div><p>' + catchPost + '</p></div><div class="card-action"><a href="#"><i class="material-icons  light-green-text">favorite_border</i></a><a href="#"><i class="material-icons  light-green-text">comment</i></a><a href="#"><i class="material-icons light-green-text">share</i></a></div></div></div>');
-        $('#textarea1').val('');
-      });      
+        var catchImg = $('fileButton').val();
+
+        if ($('fileButton').val()) {
+          containerPosts.prepend('<div class="col s12"><div class="card blue-grey darken-1"><div class="card-content white-text"><div class="row valign-wrapper"><div class="col s2"><img src="' + photoURL + '" alt="" class="circle responsive-img"></div><div class="col s10"><span class=" light-green-text"><strong id="namePosts">' + displayName + '</strong></span><p class="gray-text">' + moment().format('MMM Do YY') + ' a las ' + moment().format('hh:mm a') + '</p></div></div><p>' + catchImg + '</p></div><div class="card-action"><a href="#"><i class="material-icons  light-green-text">favorite_border</i></a><a href="#"><i class="material-icons  light-green-text">comment</i></a><a href="#"><i class="material-icons light-green-text">share</i></a></div></div></div>');
+          $('fileButton').val('');
+        } else {
+          containerPosts.prepend('<div class="col s12"><div class="card blue-grey darken-1"><div class="card-content white-text"><div class="row valign-wrapper"><div class="col s2"><img src="' + photoURL + '" alt="" class="circle responsive-img"></div><div class="col s10"><span class=" light-green-text"><strong id="namePosts">' + displayName + '</strong></span><p class="gray-text">' + moment().format('MMM Do YY') + ' a las ' + moment().format('hh:mm a') + '</p></div></div><p>' + catchPost + '</p></div><div class="card-action"><a href="#"><i class="material-icons  light-green-text">favorite_border</i></a><a href="#"><i class="material-icons  light-green-text">comment</i></a><a href="#"><i class="material-icons light-green-text">share</i></a></div></div></div>');
+          $('#textarea1').val('');
+        }
+      });
+
+      // Cargar imágenes a firebase
+      var fileButton = $('fileButton');
+
+      fileButton.change(function(event) {
+        var file = event.target.files[0];
+        var storageRef = firebse.storage().ref('mis_fotos/' + file.name).put(file);
+      });
     } else {
       // User is signed out.
       // ...
